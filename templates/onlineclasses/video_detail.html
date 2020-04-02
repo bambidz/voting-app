@@ -83,6 +83,22 @@
         <div class="grid-x grid-padding-x">
             <div>
 
+                {% if student.is_leader %}
+                <form action="", method="POST">
+                    {% csrf_token %}
+
+                    <label>Number of Participants</label>
+                    <div class ="input-group">
+                        <input class = "input-group-field" type = "text" placeholder="Enter Number.." name="part_number">
+                        <div class = "input-group-button">
+                            <input type="submit" class="button" value="Submit" name = "_part_submit" id = "_part_submit"
+                            >
+                        </div>
+                    </div>
+                </form>
+                {% endif %}
+
+
                 <!-- First Vote
                 <input type="submit", class="success button", value="1st Vote", name="submit_1st_vote">-->                
                 <form action="", method="POST">

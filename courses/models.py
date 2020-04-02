@@ -57,6 +57,7 @@ class Section(models.Model):
 class Group(models.Model):
     group_no = models.IntegerField(default=1)
     section = models.ForeignKey(Section, on_delete=models.CASCADE, default=41)
+    tmp_no = models.IntegerField(default=0)
 
     def __str__(self):
         return f"{self.group_no} in {self.section}"
